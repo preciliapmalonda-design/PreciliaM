@@ -134,43 +134,60 @@
 
   <main class="card">
     <!-- SEAL WITH GLASSES -->
-    <svg class="art" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="fur" x1="0" x2="1">
-          <stop offset="0" stop-color="#f7c7a1"/>
-          <stop offset="1" stop-color="#f2a97b"/>
-        </linearGradient>
-        <linearGradient id="heart" x1="0" x2="1">
-          <stop offset="0" stop-color="#ff4d7d"/>
-          <stop offset="1" stop-color="#ff1f68"/>
-        </linearGradient>
-      </defs>
+    <svg class="art" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="sealTitle">
+  <title id="sealTitle">Playful seal wearing glasses</title>
+  <defs>
+    <linearGradient id="sealFur" x1="0" x2="1">
+      <stop offset="0" stop-color="#f7c7a1"/>
+      <stop offset="1" stop-color="#f2a97b"/>
+    </linearGradient>
+    <linearGradient id="sealShadow" x1="0" x2="1">
+      <stop offset="0" stop-color="#f2b88d"/>
+      <stop offset="1" stop-color="#e49a6b"/>
+    </linearGradient>
+  </defs>
 
-      <path d="M250 50 C250 33 270 25 282 38
-               C294 25 314 33 314 50
-               C314 78 282 92 282 106
-               C282 92 250 78 250 50Z"
-            fill="url(#heart)"/>
+  <!-- Body -->
+  <ellipse cx="160" cy="130" rx="100" ry="70" fill="url(#sealFur)"/>
+  <!-- Belly highlight -->
+  <ellipse cx="160" cy="145" rx="70" ry="40" fill="#fff3e7" opacity="0.7"/>
 
-      <path d="M90 120 C90 70 140 40 190 60
-               C240 40 290 70 290 120
-               C290 180 240 210 190 210
-               C140 210 90 180 90 120Z"
-            fill="url(#fur)"/>
+  <!-- Flippers -->
+  <path d="M75 140 C40 130 40 170 80 170 C90 165 85 145 75 140Z" fill="url(#sealFur)"/>
+  <path d="M245 140 C280 130 280 170 240 170 C230 165 235 145 245 140Z" fill="url(#sealFur)"/>
 
-      <path d="M110 92 L95 55 L140 78 Z" fill="#f2a97b"/>
-      <path d="M270 92 L285 55 L240 78 Z" fill="#f2a97b"/>
+  <!-- Head -->
+  <circle cx="160" cy="80" r="45" fill="url(#sealFur)"/>
+  <ellipse cx="160" cy="92" rx="28" ry="18" fill="#fff3e7" opacity="0.8"/>
 
-      <circle cx="160" cy="130" r="8"/>
-      <circle cx="220" cy="130" r="8"/>
+  <!-- Nose -->
+  <path d="M160 98 C152 98 150 104 160 108 C170 104 168 98 160 98Z" fill="#6b3a2a"/>
 
-      <path d="M190 144 C186 144 182 148 182 152
-               C182 160 190 164 190 170
-               C190 164 198 160 198 152
-               C198 148 194 144 190 144Z"
-            fill="#ff7aa2"/>
-    </svg>
+  <!-- Whiskers -->
+  <path d="M120 102 C100 100 90 100 78 104" stroke="#6b3a2a" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M200 102 C220 100 230 100 242 104" stroke="#6b3a2a" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M120 110 C100 112 90 114 78 118" stroke="#6b3a2a" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+  <path d="M200 110 C220 112 230 114 242 118" stroke="#6b3a2a" stroke-width="1.6" stroke-linecap="round" fill="none"/>
 
+  <!-- Eyes (behind glasses) -->
+  <circle cx="145" cy="74" r="6" fill="#111"/>
+  <circle cx="175" cy="74" r="6" fill="#111"/>
+
+  <!-- Glasses -->
+  <g stroke="#222" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="128" y="60" width="34" height="28" rx="6" />
+    <rect x="158" y="60" width="34" height="28" rx="6" />
+    <path d="M162 74 L158 74" stroke-width="3"/>
+    <path d="M120 70 C110 64 102 60 92 62" stroke-width="3" opacity="0.0"/>
+    <!-- subtle shine on glass -->
+    <path d="M136 66 C138 64 144 64 146 66" stroke="#ffffffaa" stroke-width="1.5"/>
+    <path d="M184 66 C186 64 192 64 194 66" stroke="#ffffffaa" stroke-width="1.5"/>
+  </g>
+
+  <!-- Little heart seal mark (optional, echoes original art) -->
+  <path d="M250 40 C250 23 270 15 282 28 C294 15 314 23 314 40 C314 68 282 82 282 96 C282 82 250 68 250 40Z"
+        fill="#ff7aa2" opacity="0.95"/>
+</svg>
     <h1>sam will you stop working out your butt? i am scared</h1>
 
     <section class="button-zone" id="zone">
@@ -300,6 +317,7 @@
   </script>
 </body>
 </html>
+
 
 
 
