@@ -1,10 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Precilia M</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seal and Cat Hugging Heart</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: lightblue;
+            position: relative;
+            overflow: hidden;
+        }
+        .confetti {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 10;
+        }
+        svg {
+            width: 300px;
+            height: auto;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        .gif {
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Precilia M</h1>
-    <img src="https://media.giphy.com/media/3o6Zt5vENZ7HqO3UM8/giphy.gif" alt="Blowing Kisses and Red Heart GIF">
+    <div class="confetti"></div>
+    <svg viewBox="0 0 100 100" fill="none">
+        <!-- Seal SVG -->
+        <circle cx="30" cy="70" r="15" fill="#738A3B" />
+        <!-- Cat and Heart SVG -->
+        <rect x="50" y="50" width="20" height="20" fill="#FF7F7F" />
+        <path d="M40,30 Q50,10 60,30 Q50,50 40,30" fill="#FFD700"/>
+    </svg>
+    <div class="buttons">
+        <button id="yesButton">Yes</button>
+        <button id="noButton">No</button>
+    </div>
+    <img id="kissesGif" class="gif" src="https://media.giphy.com/media/l378zKQDF94D9bQM0/giphy.gif" alt="Blowing Kisses" />
+
+    <script>
+        const noButton = document.getElementById('noButton');
+        const yesButton = document.getElementById('yesButton');
+        const cheersElement = document.querySelector('.confetti');
+        const kissesGif = document.getElementById('kissesGif');
+
+        noButton.addEventListener('mouseover', () => {
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 50);
+            noButton.style.position = 'absolute';
+            noButton.style.left = x + 'px';
+            noButton.style.top = y + 'px';
+        });
+
+        yesButton.addEventListener('click', () => {
+            cheersElement.classList.add('animate');
+            // Display confetti (this needs actual animation code)
+            kissesGif.classList.remove('hidden');
+            kissesGif.style.display = 'block';
+        });
+    </script>
 </body>
 </html>
